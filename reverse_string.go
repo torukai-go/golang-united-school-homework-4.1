@@ -1,12 +1,11 @@
 package reverse_string
 
-import "github.com/kyokomi/emoji/v2"
-
 func ReverseString(input string) (output string) {
 	// solution goes here
+	runes := []rune(input)
 
-	for i := len(input) - 1; i >= 0; i-- {
-		output += string(input[i])
+	for i := len(runes) - 1; i >= 0; i-- {
+		output += string(runes[i])
 	}
-	return emoji.Sprint(output)
+	return output
 }
